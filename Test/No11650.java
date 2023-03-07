@@ -10,7 +10,7 @@ class No11650 {
         for (int i=0; i<n; i++) {
             int x = sc.nextInt();
             int y = sc.nextInt();
-            XY xy = new XY(x,y);
+            XY1 xy = new XY1(x,y);
             list.add(xy);
         }
 
@@ -23,11 +23,11 @@ class No11650 {
     }
 }
 
-class XY implements Comparable {
+class XY1 implements Comparable {
     int x;
     int y;
 
-    XY (int x, int y) {
+    XY1 (int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -39,8 +39,8 @@ class XY implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        if (o instanceof XY) {
-            XY xy = (XY) o;
+        if (o instanceof XY1) {
+            XY1 xy = (XY1) o;
             return this.x==xy.x ? this.y- xy.y : this.x- xy.x;
         }
         return -1;
